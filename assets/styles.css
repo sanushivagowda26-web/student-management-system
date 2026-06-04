@@ -1,1 +1,305 @@
+/* ================================
+   GLOBAL SETTINGS
+================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main App Background */
+
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #111827 50%,
+        #1e293b 100%
+    );
+}
+
+/* ==================================
+   HIDE STREAMLIT BRANDING
+================================== */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* ==================================
+   SIDEBAR
+================================== */
+
+[data-testid="stSidebar"] {
+    background: #111827;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-testid="stSidebar"] * {
+    color: white;
+}
+
+/* ==================================
+   TITLES
+================================== */
+
+.dashboard-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+}
+
+.dashboard-subtitle {
+    font-size: 16px;
+    color: #9ca3af;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* ==================================
+   KPI CARDS
+================================== */
+
+.kpi-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 20px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25);
+
+    transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+
+    transform: translateY(-5px);
+
+    border: 1px solid #00E676;
+
+    box-shadow:
+        0 12px 40px rgba(0,230,118,0.25);
+}
+
+.kpi-label {
+
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.kpi-value {
+
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+/* ==================================
+   INSIGHT BOXES
+================================== */
+
+.insight-box {
+
+    background: linear-gradient(
+        135deg,
+        rgba(0,230,118,0.15),
+        rgba(0,230,118,0.05)
+    );
+
+    border-left: 5px solid #00E676;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    color: white;
+}
+
+/* ==================================
+   CHART CONTAINER
+================================== */
+
+.chart-container {
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* ==================================
+   FILTER SECTION
+================================== */
+
+.filter-box {
+
+    background: rgba(255,255,255,0.04);
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+/* ==================================
+   DATA TABLES
+================================== */
+
+[data-testid="stDataFrame"] {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ==================================
+   BUTTONS
+================================== */
+
+.stButton > button {
+
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #00E676,
+        #00C853
+    );
+
+    color: black;
+
+    font-weight: 600;
+
+    border: none;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.stButton > button:hover {
+
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 20px rgba(0,230,118,0.5);
+}
+
+/* ==================================
+   METRIC CARDS
+================================== */
+
+[data-testid="metric-container"] {
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* ==================================
+   SCROLLBAR
+================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00E676;
+    border-radius: 20px;
+}
+
+/* ==================================
+   SUCCESS BOX
+================================== */
+
+.stSuccess {
+
+    background: rgba(0,230,118,0.15);
+
+    border-radius: 12px;
+
+    color: white;
+}
+
+/* ==================================
+   INFO BOX
+================================== */
+
+.stInfo {
+
+    border-radius: 12px;
+}
+
+/* ==================================
+   CUSTOM HEADER
+================================== */
+
+.hero-container {
+
+    background: linear-gradient(
+        135deg,
+        #00E676,
+        #00C853
+    );
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: black;
+
+    margin-bottom: 25px;
+}
+
+.hero-title {
+
+    font-size: 42px;
+
+    font-weight: 800;
+}
+
+.hero-subtitle {
+
+    font-size: 18px;
+
+    opacity: 0.8;
+}
