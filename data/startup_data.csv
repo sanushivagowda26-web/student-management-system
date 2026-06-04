@@ -1,1 +1,14 @@
+import pandas as pd
+import os
 
+# Load original file
+df = pd.read_csv("startup_data (1).csv")
+
+# Create data folder
+os.makedirs("data", exist_ok=True)
+
+# Save in project structure
+df.to_csv("data/startup_data.csv", index=False)
+
+print("startup_data.csv created successfully!")
+print(df.shape)
