@@ -1,1 +1,43 @@
+from PIL import Image, ImageDraw, ImageFont
 
+width = 800
+height = 240
+
+img = Image.new("RGB", (width, height), "#0E1117")
+draw = ImageDraw.Draw(img)
+
+# Circle
+draw.ellipse((40, 60, 160, 180), fill="#00E676")
+
+# Rocket
+rocket = [
+    (100, 50),
+    (130, 130),
+    (100, 110),
+    (70, 130)
+]
+
+draw.polygon(rocket, fill="white")
+
+try:
+    title_font = ImageFont.truetype("arial.ttf", 50)
+    subtitle_font = ImageFont.truetype("arial.ttf", 24)
+except:
+    title_font = ImageFont.load_default()
+    subtitle_font = ImageFont.load_default()
+
+draw.text(
+    (220, 80),
+    "Startup Intelligence",
+    fill="white",
+    font=title_font
+)
+
+draw.text(
+    (225, 145),
+    "Analytics • Insights • Growth",
+    fill="#AAAAAA",
+    font=subtitle_font
+)
+
+img.save("logo.png")
